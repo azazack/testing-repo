@@ -6,6 +6,8 @@ describe("first test", () => {
     const wrapper = mount(HelloWorld, {
       props:{msg:"test"}
     });
-    expect(wrapper.text()).toContain("tes")
+
+    const test = wrapper.get("[data-test='test']")
+    expect(test.text()).toBe  ("test")
   })
 })
